@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CssBaseline from "@mui/material/CssBaseline";
+import Container from "@mui/material/Container";
+import SignIn, { SignInForm } from "./components/signin";
+import Copyright from "./components/copyright";
 
 function App() {
+  const handleOnSubmit = async (form: SignInForm) => {
+    console.log(form);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <SignIn handleOnSubmit={handleOnSubmit} />
+      <Copyright sx={{ mt: 8, mb: 4 }} websiteName="My VAMOO website" websiteUrl="google.com" />
+    </Container>
   );
 }
 
