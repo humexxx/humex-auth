@@ -1,7 +1,10 @@
 {
   "name": "humex-auth",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "author": "Jason Hume Gonzalez",
+  "description": "A package for signin components",
+  "license": "MIT",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
     "@rollup/plugin-commonjs": "^26.0.1",
